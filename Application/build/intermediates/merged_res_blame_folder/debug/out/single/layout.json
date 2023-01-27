@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "C:\\Users\\iLatina\\AndroidStudioProjects\\Android_networking_challenge\\Application\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_main.xml",
+        "source": "C:\\Users\\iLatina\\AndroidStudioProjects\\Android_networking_challenge\\Application\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\iLatina\\AndroidStudioProjects\\Android_networking_challenge\\Application\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\sample_main.xml",
+        "source": "C:\\Users\\iLatina\\AndroidStudioProjects\\Android_networking_challenge\\Application\\src\\main\\res\\layout\\sample_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\iLatina\\AndroidStudioProjects\\Android_networking_challenge\\Application\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\list_character.xml",
+        "source": "C:\\Users\\iLatina\\AndroidStudioProjects\\Android_networking_challenge\\Application\\src\\main\\res\\layout\\list_character.xml"
+    }
+]

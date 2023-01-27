@@ -21,15 +21,14 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.util.Log;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 
+import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.io.Reader;
 import java.net.URL;
 
 import javax.net.ssl.HttpsURLConnection;
@@ -243,7 +242,7 @@ public class NetworkFragment extends Fragment {
                 publishProgress(DownloadCallback.Progress.GET_INPUT_STREAM_SUCCESS, 0);
                 if (stream != null) {
                     // Converts Stream to String with max length of 500.
-                    result = readStream(stream, 500);
+                    result = readStream(stream);
                     publishProgress(DownloadCallback.Progress.PROCESS_INPUT_STREAM_SUCCESS, 0);
                 }
             } finally {
@@ -261,28 +260,20 @@ public class NetworkFragment extends Fragment {
         /**
          * Converts the contents of an InputStream to a String.
          */
-        private String readStream(InputStream stream, int maxLength) throws IOException {
-            String result = null;
+        private String readStream(InputStream stream) throws IOException {
+            String result;
             // Read InputStream using the UTF-8 charset.
             InputStreamReader reader = new InputStreamReader(stream, "UTF-8");
-            // Create temporary buffer to hold Stream data with specified max length.
-            char[] buffer = new char[maxLength];
-            // Populate temporary buffer with Stream data.
-            int numChars = 0;
-            int readSize = 0;
-            while (numChars < maxLength && readSize != -1) {
-                numChars += readSize;
-                int pct = (100 * numChars) / maxLength;
-                publishProgress(DownloadCallback.Progress.PROCESS_INPUT_STREAM_IN_PROGRESS, pct);
-                readSize = reader.read(buffer, numChars, buffer.length - numChars);
+
+            //Creating a BufferedReader object
+            BufferedReader bufferedReader = new BufferedReader(reader);
+            StringBuffer sb = new StringBuffer();
+            String str;
+            while((str = bufferedReader.readLine())!= null){
+                sb.append(str);
             }
-            if (numChars != -1) {
-                // The stream was not empty.
-                // Create String that is actual length of response body if actual length was less than
-                // max length.
-                numChars = Math.min(numChars, maxLength);
-                result = new String(buffer, 0, numChars);
-            }
+            result = sb.toString();
+
             return result;
         }
     }

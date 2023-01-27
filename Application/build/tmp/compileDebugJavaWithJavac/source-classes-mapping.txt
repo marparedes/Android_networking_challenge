@@ -1,0 +1,14 @@
+com/example/android/networkconnect/DownloadCallback.java
+ com.example.android.networkconnect.DownloadCallback
+ com.example.android.networkconnect.DownloadCallback$Progress
+com/example/android/networkconnect/BuildConfig.java
+ com.example.android.networkconnect.BuildConfig
+com/example/android/networkconnect/NetworkFragment.java
+ com.example.android.networkconnect.NetworkFragment
+ com.example.android.networkconnect.NetworkFragment$1
+ com.example.android.networkconnect.NetworkFragment$DownloadTask
+ com.example.android.networkconnect.NetworkFragment$DownloadTask$Result
+com/example/android/networkconnect/databinding/SampleMainBinding.java
+ com.example.android.networkconnect.databinding.SampleMainBinding
+com/example/android/networkconnect/databinding/ListCharacterBinding.java
+ com.example.android.networkconnect.databinding.ListCharacterBinding

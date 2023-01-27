@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/NetworkConnect.iml" filepath="$PROJECT_DIR$/.idea/modules/NetworkConnect.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Application/NetworkConnect.Application.iml" filepath="$PROJECT_DIR$/.idea/modules/Application/NetworkConnect.Application.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Android_networking_challenge.iml" filepath="$PROJECT_DIR$/.idea/modules/Android_networking_challenge.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Application/Android_networking_challenge.Application.iml" filepath="$PROJECT_DIR$/.idea/modules/Application/Android_networking_challenge.Application.iml" />
     </modules>
   </component>
 </project>
